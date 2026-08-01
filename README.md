@@ -100,63 +100,13 @@ effective_exchange_rates.duckdb  exchange_rates.duckdb
 ```
 
 To run the notebook you will need to build equivalent databases from the public
-sources above. The SQL in the first few cells documents the exact schema each
-query expects.
+sources above, then copy `.env.example` to `.env` and point `DUCKDB_DIR` at them.
+The SQL in the first few cells documents the exact schema each query expects.
 
-## Getting started
-
-```bash
-# 1. Install dependencies
-poetry install --with dev
-
-# 2. Point the notebook at your DuckDB databases
-cp .env.example .env
-$EDITOR .env          # set DUCKDB_DIR
-
-# 3. Install git hooks (ruff + nbstripout)
-poetry run pre-commit install
-
-# 4. Launch
-poetry run jupyter lab notebooks/01_dipi_model.ipynb
-```
-
-## Repository layout
-
-```
-notebooks/01_dipi_model.ipynb   Full model: ingest → estimate → decompose → chart
-graphics/exhibits/              Published exhibits produced by the notebook
-graphics/                       Working charts
-src/sa_inflation_dipi/          Package scaffold
-tests/                          Test suite
-```
-
-Notebook outputs are stripped on commit via `nbstripout`, so the `.ipynb` diffs
-stay readable. Rendered figures live in `graphics/` instead.
-
-## Exhibits
-
-| Exhibit | Content |
-|---|---|
-| `exhibit_04_decomposition.png` | Headline CPI decomposed into FX, oil, food and DIPI |
-| `exhibit_04b_headline_core_dipi.png` | Headline, core and DIPI, full sample |
-| `exhibit_05_passthrough.png` | Time-varying ERPT, OPT and FPT |
-| `exhibit_06_dipi_vs_target.png` | DIPI against the SARB target regimes |
-| `exhibit_07_hold_constant.png` | Hold-constant projection to 2027 Q4 |
-| `exhibit_08_oil_scenarios.png` | Mild / moderate / severe Brent shock scenarios |
-| `exhibit_A1–A3_irf_*.png` | Impulse responses for oil, FX and food |
-
-## Development
-
-```bash
-make lint        # ruff check
-make format      # ruff format
-make typecheck   # mypy src
-make test        # pytest with coverage
-make ci          # all of the above
-```
-
-CI runs the same checks on every push and pull request, and verifies that
-notebook outputs have been stripped.
+Everything else — estimation, decomposition, projections, scenarios and charts —
+runs top to bottom in `notebooks/01_dipi_model.ipynb`. Rendered figures are in
+`graphics/exhibits/`; notebook outputs are stripped from version control, so the
+notebook itself shows code only.
 
 ## Reference
 
