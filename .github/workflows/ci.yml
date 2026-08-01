@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main, uat, dev]
+  pull_request:
+    branches: [main, uat]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Poetry
+        run: pipx install poetry
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: poetry
+
+      - name: Install dependencies
+        run: poetry install --with dev
+
+      - name: Lint
+        run: poetry run ruff check .
+
+      - name: Format check
+        run: poetry run ruff format --check .
+
+      - name: Type check
+        run: poetry run mypy src
+
+      - name: Test
+        run: poetry run pytest
+
+      - name: Check notebooks stripped
+        run: poetry run nbstripout --verify notebooks/*.ipynb
+

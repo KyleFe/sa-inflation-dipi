@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+title: "gs-dipi: Decomposing South African Inflation into External and Domestic Components"
+message: "If you use this software or its results, please cite it as below."
+type: software
+authors:
+  - given-names: Kyle
+    family-names: Ferreira
+    email: kyle.fe0212@gmail.com
+repository-code: "https://github.com/KyleFe/gs-dipi"
+abstract: >-
+  An ARDL-based decomposition of South African headline CPI inflation into the
+  contributions of the nominal effective exchange rate, Brent crude and global
+  food prices, leaving a residual Domestic Inflationary Pressure Index (DIPI)
+  used as a proxy for underlying domestic price pressure. Includes rolling-window
+  time-varying pass-through estimation, impulse-response decomposition,
+  hold-constant projections and oil shock scenario analysis.
+keywords:
+  - inflation
+  - South Africa
+  - ARDL
+  - exchange rate pass-through
+  - macroeconometrics
+  - monetary policy
+license: MIT
+version: 0.1.0
+references:
+  - type: report
+    title: >-
+      EM Macro Themes: Modelling EM Inflation — Domestic Weakness, But
+      Commodities to Drive Headline Higher
+    authors:
+      - given-names: Tadas
+        family-names: Gedminas
+      - given-names: Kevin
+        family-names: Daly
+    institution:
+      name: Goldman Sachs Economics Research
+    year: 2021
+    month: 3
+    notes: >-
+      Source methodology replicated by this project. Proprietary; not
+      redistributed here.

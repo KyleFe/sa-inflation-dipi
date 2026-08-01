@@ -1,0 +1,75 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# Type checking
+.mypy_cache/
+
+# Linting
+.ruff_cache/
+
+# Environment files
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+
+# Jupyter
+.ipynb_checkpoints/
+
+
+
+# DuckDB
+*.duckdb
+*.db
+
+
+
+# Logs
+*.log
+
+# Claude Code local settings (machine-specific paths and permissions)
+.claude/settings.local.json
+
+# ---------------------------------------------------------------------------
+# Project-specific exclusions
+# ---------------------------------------------------------------------------
+
+# Third-party copyrighted research. The Goldman Sachs EM Macro Themes report
+# this project replicates is proprietary and must not be redistributed.
+# It is cited in the README instead.
+pdf/
+
+# Internal working documents: drafts, review notes, synthesis and handover
+# memos. Process artifacts, not published output.
+docs/
+plans/
+
+# Notebooks: only the canonical model notebook is published. The remaining
+# notebooks are exploratory scratch and stay local.
+notebooks/*
+!notebooks/01_dipi_model.ipynb
