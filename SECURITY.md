@@ -10,7 +10,7 @@ supported.
 Please do **not** open a public issue for a security problem.
 
 Report it privately through
-[GitHub Security Advisories](https://github.com/KyleFe/gs-dipi/security/advisories/new),
+[GitHub Security Advisories](https://github.com/KyleFe/sa-inflation-dipi/security/advisories/new),
 or by email to kyle.fe0212@gmail.com. Expect an acknowledgement within seven days.
 
 ## Scope
