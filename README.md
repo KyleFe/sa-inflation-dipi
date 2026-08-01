@@ -1,6 +1,6 @@
-# gs-dipi — Decomposing South African Inflation
+# sa-inflation-dipi — Decomposing South African Inflation
 
-[![CI](https://github.com/KyleFe/gs-dipi/actions/workflows/ci.yml/badge.svg)](https://github.com/KyleFe/gs-dipi/actions/workflows/ci.yml)
+[![CI](https://github.com/KyleFe/sa-inflation-dipi/actions/workflows/ci.yml/badge.svg)](https://github.com/KyleFe/sa-inflation-dipi/actions/workflows/ci.yml)
 [![Python 3.14](https://img.shields.io/badge/python-3.14-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-261230.svg)](https://github.com/astral-sh/ruff)
@@ -126,7 +126,7 @@ poetry run jupyter lab notebooks/01_dipi_model.ipynb
 notebooks/01_dipi_model.ipynb   Full model: ingest → estimate → decompose → chart
 graphics/exhibits/              Published exhibits produced by the notebook
 graphics/                       Working charts
-src/gs_dipi/                    Package scaffold
+src/sa_inflation_dipi/          Package scaffold
 tests/                          Test suite
 ```
 

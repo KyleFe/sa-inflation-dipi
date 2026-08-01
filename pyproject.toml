@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "gs-dipi"
+name = "sa-inflation-dipi"
 version = "0.1.0"
 description = "Modeling FX, oil and global food pass-through dynamics to SA inflation"
 authors = ["Kyle Ferreira <kyle.fe0212@gmail.com>"]
 readme = "README.md"
-packages = [{include = "gs_dipi", from = "src"}]
+packages = [{include = "sa_inflation_dipi", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.14"

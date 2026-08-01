@@ -1,6 +1,6 @@
 """Sample unit test."""
 
-from gs_dipi import __version__
+from sa_inflation_dipi import __version__
 
 
 def test_version() -> None:
